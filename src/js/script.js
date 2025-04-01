@@ -3,9 +3,9 @@ window.onload = function () {
     webgazer.setGazeListener(function (data, elapsedTime) {
     }).begin();
   
-    webgazer.showVideo(false);
-    webgazer.showFaceOverlay(false);
-    webgazer.showFaceFeedbackBox(false);
+    webgazer.showVideo(true);
+    webgazer.showFaceOverlay(true);
+    webgazer.showFaceFeedbackBox(true);
   };
   
   const dwellThreshold = 3000; // Fixierzeit-Zeit in Millisekunden
