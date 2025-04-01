@@ -1,0 +1,10 @@
+/* Visuelles Feedback bei Fixierung eines Buttons */
+.gaze-highlight {
+    box-shadow: 0 0 0 4px #fbbf24;
+  }
+
+  .gaze-active {
+    background-color: #34d399 !important; /* Deutlich grün als Rückmeldung */
+    transition: background-color 0.2s ease;
+  }
+  
