@@ -1,10 +1,22 @@
-/* Visuelles Feedback bei Fixierung eines Buttons */
+/* Hervorhebung beim Fixieren eines Buttons */
 .gaze-highlight {
-    box-shadow: 0 0 0 4px #fbbf24;
-  }
+  border: 4px solid #fbbf24;
+  box-shadow: 0 0 0 6px #fbbf24;
+  transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
 
-  .gaze-active {
-    background-color: #34d399 !important; /* Deutlich grün als Rückmeldung */
-    transition: background-color 0.2s ease;
-  }
-  
+/* Effekt, wenn Dwell-Time erreicht wurde */
+.gaze-active {
+  background-color: #34d399 !important;
+  transition: background-color 0.2s ease;
+} 
+
+/* Container für das Dropdown-Menü, rechts oben */
+.camera-dropdown {
+  position: absolute;
+  left: 320px;
+  z-index: 1100;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
