@@ -3,35 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eyetracker Kommunikationshilfe</title>
+  <title>Eyetracker Buttons</title>
+  <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://webgazer.cs.brown.edu/webgazer.js"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-gray-100">
-  <div class="camera-dropdown">
-    <label for="cameraSelect" class="text-lg font-bold">Kamera wählen:</label>
-    <select id="cameraSelect" class="border rounded p-2">
-      <option value="">Standardkamera verwenden</option>
-    </select>
-  </div>
-  <!-- First try mit 15 Buttons -->
-  <div class="grid grid-cols-3 gap-4 p-4 w-full h-screen items-center justify-center">
-    <button class="bg-orange-400 text-white text-xl rounded-xl p-6">Ich habe Hunger</button>
-    <button class="bg-blue-400 text-white text-xl rounded-xl p-6">Ich habe Durst</button>
-    <button class="bg-green-400 text-white text-xl rounded-xl p-6">Ich möchte spielen</button>
-    <button class="bg-red-400 text-white text-xl rounded-xl p-6">Ich möchte spazieren gehen</button>
-    <button class="bg-purple-400 text-white text-xl rounded-xl p-6">Ich möchte schlafen</button>
-    <button class="bg-yellow-500 text-white text-xl rounded-xl p-6">Ich fühle mich müde</button>
-    <button class="bg-pink-400 text-white text-xl rounded-xl p-6">Ich brauche Hilfe</button>
-    <button class="bg-indigo-400 text-white text-xl rounded-xl p-6">Ich bin glücklich</button>
-    <button class="bg-teal-400 text-white text-xl rounded-xl p-6">Ich bin traurig</button>
-    <button class="bg-gray-400 text-white text-xl rounded-xl p-6">Ich bin wütend</button>
-    <button class="bg-orange-500 text-white text-xl rounded-xl p-6">Ich bin aufgeregt</button>
-    <button class="bg-blue-500 text-white text-xl rounded-xl p-6">Ich bin gelangweilt</button>
-    <button class="bg-green-500 text-white text-xl rounded-xl p-6">Ich brauche einen Arzt</button>
-    <button class="bg-red-500 text-white text-xl rounded-xl p-6">Ich brauche eine Umarmung</button>
-    <button class="bg-purple-500 text-white text-xl rounded-xl p-6">Ich liebe dich</button>
+<body class="m-0 p-0 h-screen w-screen bg-gray-100">
+  <!-- Gesamter Bildschirm in 6 Zeilen aufgeteilt:
+       1 Zeile für die Kameraauswahl, 5 Zeilen für die Buttons -->
+  <div class="grid grid-rows-6 h-full w-full">
+    
+    <!-- Oben: Kameraauswahl -->
+    <div class="row-span-1 flex items-center p-4 bg-white shadow">
+      <label for="cameraSelect" class="mr-2 font-bold">Kamera wählen:</label>
+      <select id="cameraSelect" class="border p-1 rounded">
+        <option value="">Standardkamera verwenden</option>
+      </select>
+    </div>
+
+    <!-- Unten: Buttons im 3-Spalten-Grid, 5 Zeilen, die den Rest des Bildschirms füllen -->
+    <div class="row-span-5 grid grid-cols-3 gap-4 p-4">
+      <button class="bg-orange-400 text-white text-2xl font-bold rounded-lg flex items-center justify-center">
+        Ich habe Hunger
+      </button>
+      <button class="bg-blue-400 text-white text-2xl font-bold rounded-lg flex items-center justify-center">
+        Ich habe Durst
+      </button>
+      <button class="bg-green-400 text-white text-2xl font-bold rounded-lg flex items-center justify-center">
+        Ich möchte spielen
+      </button>
+      <button class="bg-red-400 text-white text-2xl font-bold rounded-lg flex items-center justify-center">
+        Ich möchte spazieren gehen
+      </button>
+      <button class="bg-purple-400 text-white text-2xl font-bold rounded-lg flex items-center justify-center">
+        Ich möchte schlafen
+      </button>
+      <button class="bg-yellow-400 text-white text-2xl font-bold rounded-lg flex items-center justify-center">
+        Ich fühle mich müde
+      </button>
+      <button class="bg-pink-400 text-white text-2xl font-bold rounded-lg flex items-center justify-center">
+        Ich brauche Hilfe
+      </button>
+      <button class="bg-indigo-400 text-white text-2xl font-bold rounded-lg flex items-center justify-center">
+        Ich bin glücklich
+      </button>
+      <button class="bg-teal-400 text-white text-2xl font-bold rounded-lg flex items-center justify-center">
+        Ich bin traurig
+      </button>
+      <button class="bg-gray-400 text-white text-2xl font-bold rounded-lg flex items-center justify-center">
+        Ich bin wütend
+      </button>
+      <button class="bg-orange-500 text-white text-2xl font-bold rounded-lg flex items-center justify-center">
+        Ich bin aufgeregt
+      </button>
+      <button class="bg-blue-500 text-white text-2xl font-bold rounded-lg flex items-center justify-center">
+        Ich bin gelangweilt
+      </button>
+      <button class="bg-green-500 text-white text-2xl font-bold rounded-lg flex items-center justify-center">
+        Ich brauche einen Arzt
+      </button>
+      <button class="bg-red-500 text-white text-2xl font-bold rounded-lg flex items-center justify-center">
+        Ich brauche eine Umarmung
+      </button>
+      <button class="bg-purple-500 text-white text-2xl font-bold rounded-lg flex items-center justify-center">
+        Ich liebe dich
+      </button>
+    </div>
   </div>
   
   <script src="js/script.js"></script>
